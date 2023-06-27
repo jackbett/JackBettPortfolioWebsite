@@ -6,5 +6,17 @@ export const projectList = [
         image: HeatMap,
         skills: "Hadoop"
 
+    },
+    {
+        name: "HeatMap Visualizor",
+        image: HeatMap,
+        skills: "Hadoop"
+
+    },
+    {
+        name: "HeatMap Visualizor",
+        image: HeatMap,
+        skills: "Hadoop"
+
     }
 ]
