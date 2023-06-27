@@ -1,40 +1,26 @@
-import React from 'react'
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import "../styles/Home.css"
 import JackImg from '../assets/JackPic.JPG'
-import { SkillsList } from '../helpers/SkillsList'
-import SkillItem from '../components/SkillItem'
+import TechStack from '../components/TechStack';
+import Cards from '../helpers/Cards.js';
+import Experience from '../pages/Experience.js';
+import React, { useState } from "react";
+import ParticlesComponent from '../components/TsParticles.js'; // Update the import path
+import BoopText from '../components/Boop.js';
+import About from '../pages/About.js'; // Update the import path
+import Intro from '../pages/Intro.js'
 
 function Home() {
-  return (
-    <div className = 'home'>
-        <div className='about'>
-            <div className="left">
-                <div className="imgContainer">
-                    <img src={JackImg} alt="" />
-                </div>
-            </div>
-            <div className="right">
-                <h2> Hi, My Name is Jack</h2>
-                <div className='prompt'> 
-                    <p>
-                        A software engineer
-                    </p>
-                    <LinkedInIcon />
-                    <EmailIcon />
-                </div>
-            </div>
+    return (
+        <div className='home'>
+            <ParticlesComponent />
+            <Intro />
+            <About />
+            <Experience />
+            
         </div>
-        <div className='skills'>
-            <h1> Skills</h1>
-            {SkillsList.map((skill) => {
-            return <SkillItem image ={skill.image}/>
-        })}
-        </div>
-
-    </div>
-  )
+    )
 }
 
 export default Home

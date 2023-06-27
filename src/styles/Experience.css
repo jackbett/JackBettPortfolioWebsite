@@ -1,3 +1,35 @@
-.experience{
-    margin-top: 100px; 
-}
+.experience {
+    width: 100%;
+    display: flex;
+    position: relative; /* Add this to make the about section stack above the particles section */
+    flex-direction: column; /* Add this line to stack the timeline elements */
+    align-items: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    /* background-color: #292929; */
+    background-color: #f5f8fd;
+    overflow-y: auto; /* Add overflow-y property for vertical scrolling */
+  }
+  
+  .experience > :last-child {
+    margin-bottom: 2rem; /* Add margin-bottom to create space at the bottom for the last timeline element */
+  }
+
+  .vertical-timeline-element-date {
+    color: #ffffff; /* Add your desired color value */
+  }
+  
+  .chip-div{
+    margin-top: 10px;
+  }
+
+  
+  .vertical-timeline-element-content {
+    background-color: #ffffff;
+    border-top: 3px  solid #6ad7e5;
+    -webkit-box-shadow: 0 0px 0 #ffffff;
+    box-shadow: 0 0px 0 #ffffff;
+  }
+  
+  
+  

@@ -1,0 +1,3 @@
+# Validate Layout for scroll scalling
+top bar smaller and fade when scrolling down
+
