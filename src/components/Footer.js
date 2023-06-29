@@ -11,7 +11,7 @@ function Footer() {
             <EmailIcon /> 
         </div>
         <div>
-            <p> &copy; 2023 Jack.com</p>
+            <p> &copy; 2023 Jack Bett</p>
         </div>
     </div>
   )

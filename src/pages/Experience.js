@@ -11,7 +11,9 @@ import { ECBO, EMH, TDPEMH } from '../components/MuiChip.js'
 
 function Experience() {
     return (
-        <div className='experience'>
+        <div className='experience-pad'>
+
+            <div className='experience'>
             <VerticalTimeline lineColor="#3e497a">
                 <VerticalTimelineElement
                     position={ 'left' }
@@ -33,7 +35,7 @@ function Experience() {
                     position={ 'right' }
                     layout={ '1-column-right' }
                     className='vertical-timeline-element--work'
-                    date='August 2020 - August 2022'
+                    date='August 2020 - August 2021'
                     iconStyle={{ background: "#e9d35b", colo: "#fff" }}
                     icon={<WorkIcon />}
                 >
@@ -43,10 +45,11 @@ function Experience() {
                     <h4 className='vertical-timeline-element-subtitle'>
                         Buffalo, NY
                     </h4>
+                    <div className='timeline-content'>
                     <p>Year 1 - Technology Development Program</p>
                     <p>Enterprise Cloud Business Office - Bank initiative to migrate to Microsoft Azure Cloud infrastructure. Utilized IaC Azure Resource Manager 
                         Templates to quicky deploy cloud infrastructre and resources for the bank.</p>
-
+                    </div>
                     <div className='chip-div'>
                         <ECBO />                 
                     </div>
@@ -58,12 +61,12 @@ function Experience() {
                 <VerticalTimelineElement
                     position={ 'left' }
                     className='vertical-timeline-element--work'
-                    date='August 2020 - August 2022'
+                    date='August 2021 - August 2022'
                     iconStyle={{ background: "#e9d35b", colo: "#fff" }}
                     icon={<WorkIcon />}
                 >
                     <h3 className='verical-timeline-element-title'>
-                        M&T Bank - Enterprise Cloud Business Office
+                        M&T Bank - Enterprise Messaging Hub
                     </h3>
                     <h4 className='vertical-timeline-element-subtitle'>
                         Buffalo, NY
@@ -103,6 +106,8 @@ function Experience() {
             </VerticalTimeline>
 
         </div>
+        </div>
+        
     )
 }
 
