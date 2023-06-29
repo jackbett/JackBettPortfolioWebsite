@@ -1,9 +1,9 @@
-*,::after,::before {
+/* *,::after,::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
   font-family: inherit
-}
+} */
 
 html {
   font-size: 62.5%;
@@ -172,6 +172,7 @@ textarea {
 .sec-pad{
   position: relative; /* Add this to make the about section stack above the particles section */
   background-color:#ffffff;
+  min-height: calc(100vh - 60px);
 
 }
 

@@ -1,9 +1,23 @@
-import React from 'react';
-import VideoCarousel from '../components/VideoCarousel.js';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import '../styles/About.css';
 
+const skillVariants = {
+  initial: { opacity: 0, y: 50 },
+  animate: { opacity: 1, y: 0, transition: { duration: 3, delay: 0.2 } },
+};
+
 function About() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('animate');
+    }
+  }, [controls, inView]);
+
   return (
     <section id="about" className="about sec-pad">
       <div className="main-container">
@@ -32,13 +46,16 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="about__content-skills">
+          <div className="about__content-skills" ref={ref}>
             <h3 className="about__content-title">My Skills</h3>
             <div className="skills">
               {['Java', 'Python', 'React', 'CSS', 'Azure', 'GIT', 'SQL', 'IBM MQ', 'Kibana', 'CI/CD'].map((skill, index) => (
                 <motion.div
                   key={index}
                   className="skills__skill"
+                  variants={skillVariants}
+                  initial="initial"
+                  animate={controls}
                   whileHover={{ scale: 1.1 }}
                 >
                   {skill}
@@ -49,7 +66,7 @@ function About() {
         </div>
         <div className="about__carousel">
           <h3 className="about__content-title">Videos I Took!</h3>
-          <VideoCarousel />
+          {/* <VideoCarousel /> */}
         </div>
       </div>
     </section>
