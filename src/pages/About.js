@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../styles/About.css';
+import VideoPlayer from '../components/VideoPlayer.js';
+
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -128,6 +130,9 @@ function About() {
             </div>
           </motion.div>
         </div>
+       
+        <VideoPlayer />
+        
       </div>
     </section>
   );

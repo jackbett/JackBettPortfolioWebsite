@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../styles/About.css';
+import VideoPlayer from '../components/VideoPlayer';
 
 const skillVariants = {
   initial: { opacity: 0, y: 50 },
@@ -66,7 +67,7 @@ function About() {
         </div>
         <div className="about__carousel">
           <h3 className="about__content-title">Videos I Took!</h3>
-          {/* <VideoCarousel /> */}
+          <VideoPlayer />
         </div>
       </div>
     </section>
