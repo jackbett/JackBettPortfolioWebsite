@@ -24,6 +24,7 @@ const ScrollIcon = () => {
             className="mouse"
             whileHover={{ scale: 1.1 }}
             onClick={handleClick}
+            whileTap={{ scale: 0.8 }}
           >
             <div className="wheel"></div>
           </motion.div>

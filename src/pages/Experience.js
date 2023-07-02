@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import SchoolIcon from "@material-ui/icons/School"
@@ -10,9 +12,42 @@ import '../styles/Experience.css'
 import { ECBO, EMH, TDPEMH } from '../components/MuiChip.js'
 
 function Experience() {
+    
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ triggerOnce: false });
+  
+    useEffect(() => {
+      if (inView) {
+        controls.start('visible');
+      } else {
+        controls.start('hidden');
+      }
+    }, [controls, inView]);
+    
     return (
         <div className='experience-pad'>
 
+
+<motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0.5 }
+            }}
+            transition={{
+              duration: 0.8,
+              ease: [0, 0.71, 0.2, 1.01]
+            }}
+          >
+
+<h2 className="heading heading-sec heading-sec__mb-med">
+          <span className="heading-sec__main">Experience</span>
+          <span className="heading-sec__sub">
+            Glad to meet you! I hope you enjoy your stay and here is some information about me :)
+          </span>
+        </h2>
             <div className='experience'>
             <VerticalTimeline lineColor="#3e497a">
                 <VerticalTimelineElement
@@ -106,6 +141,7 @@ function Experience() {
             </VerticalTimeline>
 
         </div>
+        </motion.div>
         </div>
         
     )
