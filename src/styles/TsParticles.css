@@ -17,7 +17,8 @@
 .boopTextContainer {
   color: #000000;
   z-index: 1;
-  padding: 15rem
+  /* padding: 15rem; */
+  cursor:  pointer;
 }
 
 .particleContainer-padding {

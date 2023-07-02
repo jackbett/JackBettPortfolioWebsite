@@ -42,7 +42,7 @@ const Navbar = () => {
               smooth={true}
               offset={-60}
               duration={0}
-            > Projects </Link>  </li>
+            > About </Link>  </li>
             <li><Link
               activeClass="active"
               to="experience"

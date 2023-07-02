@@ -59,17 +59,11 @@
     justify-content: center;
     width: 100%;
     height: auto;
-    border-radius: 50%;
-    overflow: hidden;
     position: relative;
     border: double .75rem transparent;
     border-radius: 50%;
-    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #00ffa4,#a668ff);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    display: inline-block;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-      
+    overflow: hidden;
+    z-index: 1;
   }
   
   .imgContainer img {
@@ -126,4 +120,65 @@
 
   .intro__content-icons-div {
     margin-right: 2rem;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --clr-1: #00ffa4;
+  --clr-2: #a668ff;
+  --clr-3: #5298cc;
+  --clr-4: #7f73d7;
+  --clr-5: #5bd3d3;
+}
+/* body {
+  background: var(--clr-2);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+} */
+
+.card {
+  height: auto;
+  /* aspect-ratio: 1 / 1.5; */
+  background: var(--clr-1);
+  border-radius: 0.5rem;
+  border-radius: 50%;
+  position: relative;
+
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  /* z-index: 1; */
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3)
+  );
+  border-radius: inherit;
+  animation: rotation 10s linear infinite;
+}
+
+.card::after {
+  filter: blur(3.5rem);
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }

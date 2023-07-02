@@ -3,7 +3,8 @@
     width: 100%;
     background-color:#f5f8fd;
     position: relative; /* Add this to make the about section stack above the particles section */
-    padding: 1rem 0
+    padding: 12rem 0
+    
 }
 
   .experience {

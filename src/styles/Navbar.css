@@ -37,7 +37,11 @@ a {
 
 .logo-image {
   width: 2em; /* Adjust the width as needed */
-  height: auto; /* Maintain the aspect ratio */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
 }
 
 .nav-wrapper {
@@ -56,13 +60,10 @@ a {
 
 
 .logo {
-
-  float: left;
-  margin-left: 28px;
+  position: absolute;
   font-size: 1.5em;
   height: 60px;
   letter-spacing: 1px;
-  text-transform: uppercase;
 } @media(max-width: 768px) {
     .logo {
 /*       margin-left: 5px; */
@@ -105,6 +106,7 @@ a {
   text-transform: uppercase;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
+  cursor:pointer;
 }
 
 #navbar li a:hover {
