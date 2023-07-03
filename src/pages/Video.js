@@ -5,25 +5,6 @@ import VideoPlayer from '../components/VideoPlayer.js';
 import drone from '../assets/drone.svg';
 import '../styles/Video.css';
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
 
 function Video() {
   const controlsTitle = useAnimation();
