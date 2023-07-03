@@ -4,7 +4,6 @@ import { useInView } from 'react-intersection-observer';
 import '../styles/About.css';
 import VideoPlayer from '../components/VideoPlayer.js';
 
-
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
@@ -26,18 +25,36 @@ const item = {
 };
 
 function About() {
-  const controls = useAnimation();
-  const [titleRef, titleInView] = useInView({ triggerOnce: false});
-  const [contentRef, contentInView] = useInView({ triggerOnce: false});
-  const [skillsRef, skillsInView] = useInView({ triggerOnce: false});
+  const controlsTitle = useAnimation();
+  const [titleRef, titleInView] = useInView({ triggerOnce: false });
+  const controlsContent = useAnimation();
+  const [contentRef, contentInView] = useInView({ triggerOnce: false });
+  const controlsSkills = useAnimation();
+  const [skillsRef, skillsInView] = useInView({ triggerOnce: false });
 
   useEffect(() => {
     if (titleInView) {
-      controls.start('visible');
+      controlsTitle.start('visible');
     } else {
-      controls.start('hidden');
+      controlsTitle.start('hidden');
     }
-  }, [controls, titleInView]);
+  }, [controlsTitle, titleInView]);
+
+  useEffect(() => {
+    if (contentInView) {
+      controlsContent.start('visible');
+    } else {
+      controlsContent.start('hidden');
+    }
+  }, [controlsContent, contentInView]);
+
+  useEffect(() => {
+    if (skillsInView) {
+      controlsSkills.start('visible');
+    } else {
+      controlsSkills.start('hidden');
+    }
+  }, [controlsSkills, skillsInView]);
 
   return (
     <section id="about" className="about sec-pad">
@@ -45,20 +62,23 @@ function About() {
         <motion.div
           ref={titleRef}
           initial="hidden"
-          animate={controls}
+          animate={controlsTitle}
           variants={{
             visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0.5 }
+            hidden: { opacity: 0, scale: 0.5 },
           }}
           transition={{
             duration: 0.8,
-            ease: [0, 0.71, 0.2, 1.01]
+            ease: [0, 0.71, 0.2, 1.01],
           }}
         >
           <h2 className="heading heading-sec heading-sec__mb-med">
             <span className="heading-sec__main">About Me</span>
             <span className="heading-sec__sub">
-              Glad to meet you! I hope you enjoy your stay and here is some information about me 😃
+              Glad to meet you! I hope you enjoy your stay and here is some information about me&nbsp;
+              <div className='emoji'>
+                😊
+              </div>
             </span>
           </h2>
         </motion.div>
@@ -67,14 +87,14 @@ function About() {
           <motion.div
             ref={contentRef}
             initial="hidden"
-            animate={controls}
+            animate={controlsContent}
             variants={{
               visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0.5 }
+              hidden: { opacity: 0, scale: 0.5 },
             }}
             transition={{
               duration: 0.8,
-              ease: [0, 0.71, 0.2, 1.01]
+              ease: [0, 0.71, 0.2, 1.01],
             }}
           >
             <div className="about__content-main">
@@ -99,14 +119,14 @@ function About() {
           <motion.div
             ref={skillsRef}
             initial="hidden"
-            animate={controls}
+            animate={controlsSkills}
             variants={{
               visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0.5 }
+              hidden: { opacity: 0, scale: 0.5 },
             }}
             transition={{
               duration: 0.8,
-              ease: [0, 0.71, 0.2, 1.01]
+              ease: [0, 0.71, 0.2, 1.01],
             }}
           >
             <div className="about__content-skills">
@@ -115,21 +135,19 @@ function About() {
                 className="skills"
                 variants={container}
                 initial="hidden"
-                animate={controls}
+                animate={controlsSkills}
               >
-                {['Java', 'Python', 'React', 'CSS', 'Azure', 'GIT', 'SQL', 'IBM MQ', 'Kibana', 'CI/CD', 'Relational Database', 'Agile', "Spring Boot"].map((skill, index) => (
-                  <motion.div
-                    key={index}
-                    className="skills__skill"
-                    variants={item}
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
+                {['Java', 'Python', 'React', 'CSS', 'Azure', 'GIT', 'SQL', 'IBM MQ', 'Kibana', 'CI/CD', 'Relational Database', 'Agile', 'Spring Boot'].map(
+                  (skill, index) => (
+                    <motion.div key={index} className="skills__skill" variants={item}>
+                      {skill}
+                    </motion.div>
+                  )
+                )}
               </motion.div>
             </div>
           </motion.div>
-        </div>    
+        </div>
       </div>
     </section>
   );

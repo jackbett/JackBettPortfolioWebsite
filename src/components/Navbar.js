@@ -43,6 +43,14 @@ const Navbar = () => {
               offset={-60}
               duration={0}
             > About </Link>  </li>
+             <li><Link
+              activeClass="active"
+              to="video"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={0}
+            > Videos </Link>  </li>
             <li><Link
               activeClass="active"
               to="experience"
