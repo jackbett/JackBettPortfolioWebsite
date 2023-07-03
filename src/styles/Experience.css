@@ -39,4 +39,33 @@
     height: 100%;
     object-fit: contain;
     border-radius: 50%;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  }
+
+  /* .vertical-ub{
+    
+      background-color: #380909;
+      border-top: 3px  solid #6ad7e5;
+      -webkit-box-shadow: 0 0px 0 #ffffff;
+      box-shadow: 0 0px 0 #ffffff;
+    
+
+  } */
+
+  .vertical-timeline-element--education .vertical-timeline-element-content {
+    background-color: #f5f8fd;
+    border-top: 3px  solid #025abb;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  }
+  
+  .vertical-timeline-element--work .vertical-timeline-element-content {
+    background-color: #f5f8fd;
+    border-top: 3px  solid #027856;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  }
+
+  .vertical-timeline-element--work-tech .vertical-timeline-element-content {
+    background-color: #f5f8fd;
+    border-top: 3px  solid #e0e622;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   }

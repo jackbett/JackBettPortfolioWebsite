@@ -3,6 +3,7 @@ import CombinedVideo from '../assets/videos/CombinedVideos.mp4';
 import ReactPlayer from 'react-player';
 import { useInView } from 'react-intersection-observer';
 import '../styles/VideoPlayer.css';
+
 const VideoPlayer = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.5 });
   const player = useRef(null);
