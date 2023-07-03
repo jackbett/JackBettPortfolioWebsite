@@ -10,6 +10,7 @@ import './font/rhuma_sinera/Rhuma Sinera Regular.ttf'
 import ParticlesComponent from './components/TsParticles.js'; // Update the import path
 import BoopText from './components/Boop.js';
 import Intro from './pages/Intro.js'
+import Video from './pages/Video.js'
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
       </div>
       <div id = 'about'>
       <About />
+    </div>
+    <div id = 'video'>
+      <Video />
     </div>
     <div id = 'experience'>
         <Experience />

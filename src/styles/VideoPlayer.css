@@ -1,9 +1,7 @@
 .videoPlayer {
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 120rem;
+  margin: auto;
+  width: 92%;
 }
 
 .video {
@@ -11,4 +9,8 @@
   max-height: 100%;
   width: auto;
   height: auto;
+}
+.react-player {
+  border-radius: 10px;
+  overflow: hidden;
 }

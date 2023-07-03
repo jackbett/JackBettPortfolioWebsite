@@ -1,0 +1,15 @@
+.video-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .drone-image {
+    display: inline-block;
+    vertical-align: middle;
+
+  }
+
+  
