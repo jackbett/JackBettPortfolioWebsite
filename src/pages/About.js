@@ -58,7 +58,7 @@ function About() {
           <h2 className="heading heading-sec heading-sec__mb-med">
             <span className="heading-sec__main">About Me</span>
             <span className="heading-sec__sub">
-              Glad to meet you! I hope you enjoy your stay and here is some information about me :)
+              Glad to meet you! I hope you enjoy your stay and here is some information about me 😃
             </span>
           </h2>
         </motion.div>
@@ -129,10 +129,7 @@ function About() {
               </motion.div>
             </div>
           </motion.div>
-        </div>
-       
-        <VideoPlayer />
-        
+        </div>    
       </div>
     </section>
   );

@@ -124,7 +124,6 @@ function Experience() {
                     icon={<WorkIcon />}
                     
                 >
-            
                     <h3 className='verical-timeline-element-title'>
                         M&T Bank - Enterprise Messaging Hub
                     </h3>

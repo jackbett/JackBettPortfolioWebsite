@@ -1,7 +1,7 @@
 .experience-pad{
     min-height: calc(100vh - 60px);
     width: 100%;
-    background-color:#f5f8fd;
+    background-color:#ffffff;
     position: relative; /* Add this to make the about section stack above the particles section */
     padding: 12rem 0
     
