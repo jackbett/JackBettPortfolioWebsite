@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import WorkIcon from "@material-ui/icons/Work"
-import UbIcon from "../helpers/UB.js";
+import UbIcon from "../assets/UbLogo.png";
 import '../styles/Experience.css'
 
 
@@ -53,9 +53,18 @@ function Experience() {
                     position={ 'left' }
                     className='vertical-timeline-element--education'
                     date='2015 - 2019'
-                    iconStyle={{ background: "#3e497a", color: "#fff", display: 'flex', alignItems: 'center', justifyContent: 'center' }} // Add display, alignItems, and justifyContent properties
-                    icon={<UbIcon style={{ width: '100%', height: '100%' }} />} // Adjust the size of the icon
-                  >
+                    iconStyle={{
+                        background: "#3e497a",
+                        color: "#fff",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: "48px",
+                        height: "48px",
+                        borderRadius: "50%",
+                      }}                    
+                      icon={<img src={UbIcon} alt="University at Buffalo"  className="timeline-icon"/>}
+                    >
                     <h3 className='verical-timeline-element-title'>
                         University at Buffalo<br />
                     </h3>
