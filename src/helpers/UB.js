@@ -7,6 +7,7 @@ const ub = () => (
     <img
       className="img_logo"
       src={UbIcon}
+      alt="University at Buffalo Logo" // Add the alt prop with a meaningful description
     />
   </div>
 );
