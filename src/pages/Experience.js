@@ -3,7 +3,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
-import SchoolIcon from "@material-ui/icons/School"
 import WorkIcon from "@material-ui/icons/Work"
 import UbIcon from "../helpers/UB.js";
 import '../styles/Experience.css'
