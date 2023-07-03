@@ -3,7 +3,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
-import WorkIcon from "@material-ui/icons/Work"
 import UbIcon from "../assets/UB.png";
 import MTB from "../assets/MTB.svg";
 import MTBBlack from "../assets/MTBBlack.svg";
