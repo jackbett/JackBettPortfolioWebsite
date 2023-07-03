@@ -13,6 +13,7 @@
     "react-particles": "^2.10.1",
     "react-scripts": "5.0.1",
     "react-vertical-timeline-component": "^3.6.0",
+    "tsparticles": "^2.10.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
