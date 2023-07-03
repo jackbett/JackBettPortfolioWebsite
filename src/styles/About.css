@@ -271,4 +271,21 @@ textarea {
     color: #1f1f1f
   }
   
+
+  .emoji {
+    animation: rotate 2s infinite linear;
+    display: inline-block;
+  }
   
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(-15deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(-15deg);
+    }
+  }

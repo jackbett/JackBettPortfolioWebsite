@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import JackImg from '../assets/JackPic.JPG';
-
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import '../styles/Intro.css';
 
 function Intro() {
@@ -13,25 +12,37 @@ function Intro() {
     // You can navigate to a new page or perform any other action
   };
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: false });
+
+  const controlsTitle = useAnimation();
+  const [titleRef, titleInView] = useInView({ triggerOnce: false });
+  const controlsContent = useAnimation();
+  const [contentRef, contentInView] = useInView({ triggerOnce: false });
 
   useEffect(() => {
-    if (inView) {
-      controls.start('visible');
+    if (titleInView) {
+      controlsTitle.start('visible');
     } else {
-      controls.start('hidden');
+      controlsTitle.start('hidden');
     }
-  }, [controls, inView]);
+  }, [controlsTitle, titleInView]);
+
+  useEffect(() => {
+    if (contentInView) {
+      controlsContent.start('visible');
+    } else {
+      controlsContent.start('hidden');
+    }
+  }, [controlsContent, contentInView]);
+
 
   return (
     <section id="intro" className="intro sec-padding">
       <div className="intro-container">
         <div className="intro__content">
           <motion.div
-            ref={ref}
+            ref={titleRef}
             initial="hidden"
-            animate={controls}
+            animate={controlsTitle}
             variants={{
               visible: { opacity: 1, scale: 1 },
               hidden: { opacity: 0, scale: 0.5 }
@@ -70,14 +81,14 @@ function Intro() {
           </motion.div>
 
            <motion.div
+           ref={contentRef}
             className="intro__content-right"
             initial="hidden"
-            animate={controls}
+            animate={controlsContent}
             variants={{
-              visible: { opacity: 1, x: 0 },
-              hidden: { opacity: 0, x: '100%' }
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0.5 },
             }}
-
             transition={{
               duration: 0.8,
               ease: [0, 0.71, 0.2, 1.01]
