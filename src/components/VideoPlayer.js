@@ -25,6 +25,7 @@ const VideoPlayer = () => {
         height="100%"
         playing={inView}
         loop={true}
+        muted="muted"
       />
     </div>
   );
