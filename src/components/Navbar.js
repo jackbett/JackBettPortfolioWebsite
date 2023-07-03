@@ -1,8 +1,7 @@
-import '../styles/Navbar.css'
 import React, { useState } from "react";
-import LightLogo from '../assets/JBlight.png';
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import LightLogo from "../assets/JBlight.png";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -12,12 +11,12 @@ const Navbar = () => {
   };
 
   const scrollToTop = () => {
-    scroll.scrollToTop({duration: 0, offset: -60});
+    scroll.scrollToTop({ duration: 0, offset: -60 });
   };
 
   return (
     <>
-      <nav id="navbar" className="">
+      <nav id="navbar">
         <div className="nav-wrapper">
           {/* Navbar Logo */}
           <div className="logo" onClick={scrollToTop}>
@@ -26,39 +25,55 @@ const Navbar = () => {
           </div>
 
           {/* Navbar Links */}
-          <ul id="menu">
-            <li><Link
-              activeClass="active"
-              to="intro"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={0}
-            > Hello</Link>  </li>
-            <li><Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={0}
-            > About </Link>  </li>
-             <li><Link
-              activeClass="active"
-              to="video"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={0}
-            > Videos </Link>  </li>
-            <li><Link
-              activeClass="active"
-              to="experience"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={0}
-            > Experience</Link>  </li>
+          <ul id="menu" className={menuToggle ? "active" : ""}>
+            <li>
+              <Link
+                activeClass="active"
+                to="intro"
+                spy={true}
+                smooth={true}
+                offset={-60}
+                duration={0}
+              >
+                Hello
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-60}
+                duration={0}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="video"
+                spy={true}
+                smooth={true}
+                offset={-60}
+                duration={0}
+              >
+                Videos
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
+                to="experience"
+                spy={true}
+                smooth={true}
+                offset={-60}
+                duration={0}
+              >
+                Experience
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -69,11 +84,59 @@ const Navbar = () => {
       </div>
 
       <div className={`overlay-menu ${menuToggle ? "active" : ""}`}>
-        <ul id="menu">
-          <li><Link to='/'> Home</Link> </li>
-          <li><Link to='/about'> About </Link> </li>
-          <li><Link to='/projects'> Projects </Link> </li>
-          <li><Link to='/experience'> Experience</Link> </li>
+        <ul>
+          <li>
+            <Link
+              activeClass="active"
+              to="intro"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={0}
+              onClick={handleMenuToggle}
+            >
+              Hello
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={0}
+              onClick={handleMenuToggle}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="video"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={0}
+              onClick={handleMenuToggle}
+            >
+              Videos
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={0}
+              onClick={handleMenuToggle}
+            >
+              Experience
+            </Link>
+          </li>
         </ul>
       </div>
     </>

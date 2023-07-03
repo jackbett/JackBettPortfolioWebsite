@@ -8,10 +8,7 @@ import '../styles/Intro.css';
 
 function Intro() {
   const handleClick = () => {
-    // Handle the button click event here
-    // You can navigate to a new page or perform any other action
   };
-
 
   const controlsTitle = useAnimation();
   const [titleRef, titleInView] = useInView({ triggerOnce: false });
@@ -33,7 +30,6 @@ function Intro() {
       controlsContent.start('hidden');
     }
   }, [controlsContent, contentInView]);
-
 
   return (
     <section id="intro" className="intro sec-padding">
@@ -60,28 +56,28 @@ function Intro() {
                 <p className="intro__content-details-para">
                   I am a Back End Software Engineer located in Buffalo, New York.
                 </p>
-              </div>
-              <div className="intro__content-icons">
-                <div className="intro__content-icons-linkedin">
-                  <a href="https://google.com" onClick={handleClick}>
-                    <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                      <LinkedInIcon className="icon" />
-                    </motion.button>
-                  </a>
+                <div className="intro__content-icons intro__content-icons-desktop">
+                  <div className="intro__content-icons-linkedin">
+                    <a href="https://google.com" onClick={handleClick}>
+                      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                        <LinkedInIcon className="icon" />
+                      </motion.button>
+                    </a>
+                  </div>
+                  <div className="intro__content-icons-div">
+                    <a href="https://google.com" onClick={handleClick}>
+                      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                        <EmailIcon className="icon" />
+                      </motion.button>
+                    </a>
+                  </div>
                 </div>
-                <div className="intro__content-icons-div">
-                  <a href="https://google.com" onClick={handleClick}>
-                    <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                      <EmailIcon className="icon" />
-                    </motion.button>
-                  </a>
-                </div>
               </div>
-            </div>
+              </div>
           </motion.div>
-
-           <motion.div
-           ref={contentRef}
+        
+          <motion.div
+            ref={contentRef}
             className="intro__content-right"
             initial="hidden"
             animate={controlsContent}
@@ -97,6 +93,22 @@ function Intro() {
             <div className="card">
               <div className="imgContainer">
                 <img src={JackImg} alt="" />
+              </div>
+            </div>
+            <div className="intro__content-icons intro__content-icons-mobile">
+              <div className="intro__content-icons-linkedin">
+                <a href="https://google.com" onClick={handleClick}>
+                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                    <LinkedInIcon className="icon" />
+                  </motion.button>
+                </a>
+              </div>
+              <div className="intro__content-icons-div">
+                <a href="https://google.com" onClick={handleClick}>
+                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                    <EmailIcon className="icon" />
+                  </motion.button>
+                </a>
               </div>
             </div>
           </motion.div>

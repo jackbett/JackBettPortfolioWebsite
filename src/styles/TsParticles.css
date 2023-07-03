@@ -1,34 +1,29 @@
 .particles-sec-padding {
   min-height: calc(100vh - 60px);
   padding: 5rem 0;
-  position: relative;
   background-color: #ffffff;
   height: 100%;
-  overflow: hidden;
-  justify-content: center;
   display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  position: relative;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-
 
 .boopTextContainer {
   color: #000000;
   z-index: 1;
-  /* padding: 15rem; */
-  cursor:  pointer;
+  text-align: center;
+  padding: 1rem;
+    margin-bottom: 4rem; /* Adjust the margin as needed */
+
 }
 
-.particleContainer-padding {
-  position: relative;
-  background-color: #b82222;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-  min-height: calc(100vh - 60px);
-  padding: 2rem 2rem;
+.welcome-text {
+  font-family: "RhumaSinera";
+  font-size: 15rem;
+  color: #1f1f1f;
+  line-height: 1;
+  padding: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -38,50 +33,6 @@
 }
 
 
-.welcome-text {
-  font-family: "RhumaSinera";
-  font-size: 20rem;
-  color: #1f1f1f;
-  position: relative;
-}
-
-.welcome-container {
-  position: relative;
-}
-
-.scroll-icon {
-  background: #3498db;
-}
-
-.icon-scroll,
-.icon-scroll:before {
-  position: absolute;
-  left: 50%;
-}
-
-.icon-scroll {
-  width: 40px;
-  height: 70px;
-  margin-left: -20px;
-  top: 50%;
-  margin-top: -35px;
-  box-shadow: inset 0 0 0 1px #fff;
-  border-radius: 25px;
-}
-
-.icon-scroll:before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #fff;
-  margin-left: -4px;
-  top: 8px;
-  border-radius: 4px;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-name: scroll;
-}
-
 @keyframes scroll {
   0% {
     opacity: 1;
@@ -89,5 +40,14 @@
   100% {
     opacity: 0;
     transform: translateY(46px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .boopTextContainer {
+    text-align: center;
+    overflow: visible;
+    justify-content: space-around;
   }
 }
