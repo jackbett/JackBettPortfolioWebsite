@@ -10,6 +10,11 @@ function Intro() {
   const handleClick = () => {
   };
 
+  const handleClickEmail = () => {
+    const email = 'jackabett@gmail.com'; // Replace with your dynamic email logic
+    window.location.href = `mailto:${email}`;
+  };
+
   const controlsTitle = useAnimation();
   const [titleRef, titleInView] = useInView({ triggerOnce: false });
   const controlsContent = useAnimation();
@@ -58,14 +63,14 @@ function Intro() {
                 </p>
                 <div className="intro__content-icons intro__content-icons-desktop">
                   <div className="intro__content-icons-linkedin" color>
-                    <a href="https://google.com" onClick={handleClick}>
+                    <a href="https://www.linkedin.com/in/jackabett/" onClick={handleClick}>
                       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                         <LinkedInIcon className="icon" color='#ffffff'/>
                       </motion.button>
                     </a>
                   </div>
                   <div className="intro__content-icons-div">
-                    <a href="https://google.com" onClick={handleClick}>
+                  <a onClick={handleClickEmail}>
                       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                         <EmailIcon className="icon" />
                       </motion.button>

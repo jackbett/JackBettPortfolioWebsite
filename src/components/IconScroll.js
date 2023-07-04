@@ -17,7 +17,7 @@ const ScrollIcon = () => {
           to="intro"
           spy={true}
           smooth={true}
-          offset={-60}
+          offset={0}
           duration={0}
         >
           <motion.div
