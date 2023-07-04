@@ -28,10 +28,11 @@
 
 .intro__content-left {
   display: grid;
+  position: relative; /* Add positioning */
+  top: 50%; /* Move the element down by 50% of its parent's height */
+  transform: translateY(-50%); /* Move the element up by 50% of its own height */
   place-items: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
-
+  margin: 0 auto;  
 }
 
 .intro__content-title {

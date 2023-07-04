@@ -59,7 +59,7 @@ function Intro() {
               </h3>
               <div className="intro__content-details">
                 <p className="intro__content-details-para">
-                  I am a Back End Software Engineer located in Buffalo, New York.
+                  I am a Backend Software Engineer located in Buffalo, New York.
                 </p>
                 <div className="intro__content-icons intro__content-icons-desktop">
                   <div className="intro__content-icons-linkedin" color>
