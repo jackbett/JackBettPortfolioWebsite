@@ -27,9 +27,9 @@ function About() {
   const controlsTitle = useAnimation();
   const [titleRef, titleInView] = useInView({ triggerOnce: false });
   const controlsContent = useAnimation();
-  const [contentRef, contentInView] = useInView({ triggerOnce: false });
+  const [contentRef, contentInView] = useInView({ triggerOnce: true });
   const controlsSkills = useAnimation();
-  const [skillsRef, skillsInView] = useInView({ triggerOnce: false });
+  const [skillsRef, skillsInView] = useInView({ triggerOnce: true });
 
   useEffect(() => {
     if (titleInView) {

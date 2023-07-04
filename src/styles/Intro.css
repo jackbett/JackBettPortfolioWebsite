@@ -87,13 +87,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem; /* Add padding to the top */
 }
 
 .intro__content-icons .icon {
-    color: #eff2f7;
-
-  font-size: 8rem;
+  color: #eff2f7;
+  size: 120;
+  font-size: 6rem;
+  margin-right: 1rem; /* Add margin to the right */
 }
 
 .wave {
@@ -186,6 +190,7 @@ animation: gradientAnimation 10s linear infinite;
 }
 
 .intro__content-icons-desktop {
+  padding-top: 30px;
   display: none;
 }
 

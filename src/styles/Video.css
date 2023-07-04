@@ -28,27 +28,3 @@
   }
 }
 
-
-.intro__content-details-para {
-  font-size: 1.8rem;
-  color: #eff2f7;
-  max-width: 60rem;
-  line-height: 1.7;
-  margin-bottom: 1rem
-}
-
-.intro__content-details-para--hl {
-  font-weight: 700;
-  margin: 0 3px
-}
-
-.intro__content-details-para:last-child {
-  margin-bottom: 4rem
-}
-
-.intro__content-details-para a {
-  text-decoration: underline;
-  font-weight: 700;
-  color: #7843e9;
-  margin: 0 3px
-}

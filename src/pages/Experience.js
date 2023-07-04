@@ -14,7 +14,7 @@ import { ECBO, EMH, TDPEMH } from '../components/MuiChip.js'
 function Experience() {
     const controls = useAnimation();
     const [ref, inView] = useInView({
-        triggerOnce: false, // Set this to false to animate the timeline elements each time they come into view
+        triggerOnce: true, // Set this to false to animate the timeline elements each time they come into view
         threshold: 0.5, // Adjust this value as per your requirement
     });
 

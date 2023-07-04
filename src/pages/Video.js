@@ -10,7 +10,7 @@ function Video() {
   const controlsTitle = useAnimation();
   const [titleRef, titleInView] = useInView({ triggerOnce: false });
   const controlsVideo = useAnimation();
-  const [videoRef, videoInView] = useInView({ triggerOnce: false });
+  const [videoRef, videoInView] = useInView({ triggerOnce: true });
 
   useEffect(() => {
     if (titleInView) {

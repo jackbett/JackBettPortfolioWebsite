@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import JackImg from '../assets/JackPic.JPG';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -17,7 +18,7 @@ function Intro() {
   const controlsTitle = useAnimation();
   const [titleRef, titleInView] = useInView({ triggerOnce: false });
   const controlsContent = useAnimation();
-  const [contentRef, contentInView] = useInView({ triggerOnce: false });
+  const [contentRef, contentInView] = useInView({ triggerOnce: true });
 
   useEffect(() => {
     if (titleInView) {
@@ -73,6 +74,18 @@ function Intro() {
                       </motion.button>
                     </a>
                   </div>
+                  <div className="intro__content-icons-github" color>
+                    <a
+                      href="https://github.com/jackbett"
+                      onClick={handleClick}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                        <GitHubIcon className="icon" color="#ffffff" />
+                      </motion.button>
+                    </a>
+                  </div>
                   <div className="intro__content-icons-div">
                     <button onClick={handleClickEmail}>
                       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
@@ -114,6 +127,18 @@ function Intro() {
                 >
                   <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <LinkedInIcon className="icon" />
+                  </motion.button>
+                </a>
+              </div>
+              <div className="intro__content-icons-github">
+                <a
+                  href="https://github.com/jackbett/"
+                  onClick={handleClick}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+                    <GitHubIcon className="icon" />
                   </motion.button>
                 </a>
               </div>

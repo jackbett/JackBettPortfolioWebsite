@@ -6,7 +6,7 @@ import './font/rhuma_sinera/Rhuma Sinera Regular.ttf'
 import ParticlesComponent from './components/TsParticles.js'; // Update the import path
 import Intro from './pages/Intro.js'
 import Video from './pages/Video.js'
-
+import Footer from './components/Footer.js'
 function App() {
   return (
     <div className="App">
@@ -19,14 +19,14 @@ function App() {
       </div>
       <div id = 'about'>
       <About />
-    </div>
-    <div id = 'video'>
+      </div>
+      <div id = 'video'>
       <Video />
-    </div>
-    <div id = 'experience'>
-        <Experience />
-    </div>
-
+      </div>
+      <div id = 'experience'>
+      <Experience />
+      </div>
+    <Footer />
     </div>
   );
 }
