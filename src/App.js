@@ -7,8 +7,13 @@ import ParticlesComponent from './components/TsParticles.js'; // Update the impo
 import Intro from './pages/Intro.js'
 import Video from './pages/Video.js'
 import Footer from './components/Footer.js'
+import { ParallaxProvider } from 'react-scroll-parallax';
+
+
+
 function App() {
   return (
+    <ParallaxProvider>
     <div className="App">
       <Navbar />
       <div id = 'splash'>
@@ -28,6 +33,7 @@ function App() {
       </div>
     <Footer />
     </div>
+    </ ParallaxProvider>
   );
 }
 

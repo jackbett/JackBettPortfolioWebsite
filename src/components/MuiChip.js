@@ -8,6 +8,7 @@ const chipStyle = {
 export const ECBO = () => {
     return(
         <Stack direction = 'row' spacing = {1} color= '#ffffff'>
+            <Chip label = 'AZ-900' style={chipStyle}/>   
             <Chip label = 'Azure' style={chipStyle}/>   
             <Chip label = 'DevOps' style={chipStyle}/>
             <Chip label = 'CI/CD' style={chipStyle}/>

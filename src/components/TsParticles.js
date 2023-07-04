@@ -4,6 +4,8 @@ import { loadStarsPreset } from "tsparticles-preset-stars";
 import "../styles/TsParticles.css";
 import TypeEffect from "../components/TypeEffect.js";
 import IconScroll from "../components/IconScroll.js";
+import Astronaut from "../assets/Astronaut.png";
+import {Parallax } from "react-scroll-parallax";
 
 const ParticlesComponent = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -22,18 +24,33 @@ const ParticlesComponent = () => {
   };
 
   return (
-    <section id="particles" className="particles-sec-padding">
-      <div className="typeEffect">
-        <TypeEffect />
-      </div>
+      <section id="particles" className="particles-sec-pad">
+        
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={options}
       />
-      <IconScroll />
-    </section>
+
+        <div className="main-particle-container">
+        <div className="typeEffect">
+          <TypeEffect />
+        </div>
+
+       
+       
+        <Parallax translateY={['-100%', '100%']}
+      >
+             <div className="astroNaut">
+              <img src={Astronaut} alt="Astronaut" />
+             </div>
+            
+          </Parallax>
+        </div>
+
+       
+      </section>
   );
 };
 
