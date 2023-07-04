@@ -172,7 +172,8 @@ textarea {
 .sec-pad{
   position: relative; /* Add this to make the about section stack above the particles section */
   background-color:#121212;
-  min-height: calc(100vh - 60px);
+  /* min-height: calc(100vh - 60px); */
+  min-height: 100vh;
 
 }
 

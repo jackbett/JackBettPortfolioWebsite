@@ -1,5 +1,7 @@
 .particles-sec-padding {
-  min-height: calc(100vh - 60px);
+  /* min-height: calc(100vh - 60px); */
+  min-height: 100vh;
+
   padding: 5rem 0;
   /* background-color: #00000000; */
   height: 100%;
@@ -23,14 +25,14 @@
 
 @media (max-width: 768px) {
   .sec-padding {
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh);
   }
 }
 
 
 @keyframes scroll {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     opacity: 0;

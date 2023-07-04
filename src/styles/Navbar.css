@@ -283,12 +283,14 @@
   visibility: hidden;
   transition: opacity 0.3s, visibility 0s linear 0.3s;
   overflow-y: auto;
+  width: 100%;
 }
 
 .overlay-menu.active {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s;
+  width: 100%;
 }
 
 .overlay-menu ul {
@@ -305,7 +307,7 @@
 .overlay-menu ul li {
   margin-top: 20px;
   opacity: 0;
-  transform: translate(0, 20px);
+  transform: translate(100%);
   transition: opacity 0.3s, transform 0.3s;
 }
 
@@ -313,6 +315,7 @@
   opacity: 1;
   transform: translate(0, 0);
   transition: opacity 0.3s, transform 0.3s;
+  width: 100%;
 }
 
 .overlay-menu ul li a {
