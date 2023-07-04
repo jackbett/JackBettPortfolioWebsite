@@ -3,7 +3,6 @@ import Particles from "react-tsparticles";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 import "../styles/TsParticles.css";
 import TypeEffect from "../components/TypeEffect.js";
-import IconScroll from "../components/IconScroll.js";
 import Astronaut from "../assets/Astronaut.png";
 import {Parallax } from "react-scroll-parallax";
 
