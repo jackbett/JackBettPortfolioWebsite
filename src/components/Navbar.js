@@ -32,7 +32,7 @@ const Navbar = () => {
                 to="intro"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={0}
                 duration={0}
               >
                 Hello
@@ -44,7 +44,7 @@ const Navbar = () => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={0}
                 duration={0}
               >
                 About
@@ -56,7 +56,7 @@ const Navbar = () => {
                 to="video"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={0}
                 duration={0}
               >
                 Videos
@@ -68,7 +68,7 @@ const Navbar = () => {
                 to="experience"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={0}
                 duration={0}
               >
                 Experience
@@ -91,7 +91,7 @@ const Navbar = () => {
               to="intro"
               spy={true}
               smooth={true}
-              offset={-60}
+              offset={0}
               duration={0}
               onClick={handleMenuToggle}
             >
@@ -104,7 +104,7 @@ const Navbar = () => {
               to="about"
               spy={true}
               smooth={true}
-              offset={-60}
+              offset={0}
               duration={0}
               onClick={handleMenuToggle}
             >
@@ -117,7 +117,7 @@ const Navbar = () => {
               to="video"
               spy={true}
               smooth={true}
-              offset={-60}
+              offset={0}
               duration={0}
               onClick={handleMenuToggle}
             >
@@ -130,7 +130,7 @@ const Navbar = () => {
               to="experience"
               spy={true}
               smooth={true}
-              offset={-60}
+              offset={0}
               duration={0}
               onClick={handleMenuToggle}
             >
