@@ -52,9 +52,3 @@
   color: #7843e9;
   margin: 0 3px
 }
-
-.about__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem
-}
