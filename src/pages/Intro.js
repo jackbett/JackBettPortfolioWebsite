@@ -7,8 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import '../styles/Intro.css';
 
 function Intro() {
-  const handleClick = () => {
-  };
+  const handleClick = () => {};
 
   const handleClickEmail = () => {
     const email = 'jackabett@gmail.com'; // Replace with your dynamic email logic
@@ -46,11 +45,11 @@ function Intro() {
             animate={controlsTitle}
             variants={{
               visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0.5 }
+              hidden: { opacity: 0, scale: 0.5 },
             }}
             transition={{
               duration: 0.8,
-              ease: [0, 0.71, 0.2, 1.01]
+              ease: [0, 0.71, 0.2, 1.01],
             }}
           >
             <div className="intro__content-left">
@@ -63,24 +62,29 @@ function Intro() {
                 </p>
                 <div className="intro__content-icons intro__content-icons-desktop">
                   <div className="intro__content-icons-linkedin" color>
-                    <a href="https://www.linkedin.com/in/jackabett/" onClick={handleClick}>
+                    <a
+                      href="https://www.linkedin.com/in/jackabett/"
+                      onClick={handleClick}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                        <LinkedInIcon className="icon" color='#ffffff'/>
+                        <LinkedInIcon className="icon" color="#ffffff" />
                       </motion.button>
                     </a>
                   </div>
                   <div className="intro__content-icons-div">
-                  <a onClick={handleClickEmail}>
+                    <button onClick={handleClickEmail}>
                       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                         <EmailIcon className="icon" />
                       </motion.button>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
-              </div>
+            </div>
           </motion.div>
-        
+
           <motion.div
             ref={contentRef}
             className="intro__content-right"
@@ -92,7 +96,7 @@ function Intro() {
             }}
             transition={{
               duration: 0.8,
-              ease: [0, 0.71, 0.2, 1.01]
+              ease: [0, 0.71, 0.2, 1.01],
             }}
           >
             <div className="card">
@@ -102,18 +106,23 @@ function Intro() {
             </div>
             <div className="intro__content-icons intro__content-icons-mobile">
               <div className="intro__content-icons-linkedin">
-                <a href="https://google.com" onClick={handleClick}>
+                <a
+                  href="https://www.linkedin.com/in/jackabett/"
+                  onClick={handleClick}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <LinkedInIcon className="icon" />
                   </motion.button>
                 </a>
               </div>
               <div className="intro__content-icons-div">
-                <a href="https://google.com" onClick={handleClick}>
+                <button onClick={handleClickEmail}>
                   <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <EmailIcon className="icon" />
                   </motion.button>
-                </a>
+                </button>
               </div>
             </div>
           </motion.div>
