@@ -61,7 +61,7 @@ const [titleRef, titleInView] = useInView({ triggerOnce: false });
             </h2>
             </motion.div>
             <div className='experience'>
-                <VerticalTimeline lineColor="#3e497a">
+                <VerticalTimeline lineColor="#eff2f7">
                     <VerticalTimelineElement
                         position={'left'}
                         className='vertical-timeline-element--education'
@@ -91,7 +91,7 @@ const [titleRef, titleInView] = useInView({ triggerOnce: false });
 
                     </VerticalTimelineElement>
                 </VerticalTimeline>
-                <VerticalTimeline lineColor="#3e497a">
+                <VerticalTimeline lineColor="#eff2f7">
                     <VerticalTimelineElement
                         position={'right'}
                         layout={'1-column-right'}

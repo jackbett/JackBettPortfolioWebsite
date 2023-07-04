@@ -1,7 +1,7 @@
 .particles-sec-padding {
   min-height: calc(100vh - 60px);
   padding: 5rem 0;
-  background-color: #ffffff;
+  /* background-color: #00000000; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -9,22 +9,17 @@
   align-items: center;
 }
 
-.boopTextContainer {
-  color: #000000;
+.typeEffect {
+  color: #eff2f7;
   z-index: 1;
   text-align: center;
   padding: 1rem;
-    margin-bottom: 4rem; /* Adjust the margin as needed */
+  /* font-family: "RhumaSinera"; */
 
+  margin-bottom: 4rem; /* Adjust the margin as needed */
+  font-size: 5rem;
 }
 
-.welcome-text {
-  font-family: "RhumaSinera";
-  font-size: 15rem;
-  color: #1f1f1f;
-  line-height: 1;
-  padding: 2rem;
-}
 
 @media (max-width: 768px) {
   .sec-padding {
@@ -45,7 +40,7 @@
 
 
 @media (max-width: 768px) {
-  .boopTextContainer {
+  .typeEffect {
     text-align: center;
     overflow: visible;
     justify-content: space-around;

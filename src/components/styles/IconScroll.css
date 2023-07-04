@@ -18,7 +18,7 @@
   .mouse {
 	width: 50px;
 	height: 90px;
-	border: 3px solid #1f1f1f;
+	border: 3px solid #eff2f7;
 	border-radius: 60px;
 	position: relative;
 	cursor: pointer;
@@ -32,7 +32,7 @@
 	top: 10px;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: #1f1f1f;
+	background-color: #eff2f7;
 	border-radius: 50%;
 	opacity: 1;
 	animation: wheel 2s infinite;

@@ -1,7 +1,7 @@
 .experience-pad{
     min-height: calc(100vh - 60px);
     width: 100%;
-    background-color:#ffffff;
+    background-color:#121212;
     position: relative; /* Add this to make the about section stack above the particles section */
     padding: 12rem 0
     
@@ -24,20 +24,14 @@
 
 
   .vertical-timeline-element-date {
-    color: #000000; /* Add your desired color value */
+    color: #eff2f7; /* Add your desired color value */
   }
   
   .chip-div{
     margin-top: 10px;
   }
 
-  
-  .vertical-timeline-element-content {
-    background-color: #ffffff;
-    border-top: 3px  solid #6ad7e5;
-    -webkit-box-shadow: 0 0px 0 #ffffff;
-    box-shadow: 0 0px 0 #ffffff;
-  }
+
   
   
   .timeline-icon {
@@ -59,19 +53,24 @@
   } */
 
   .vertical-timeline-element--education .vertical-timeline-element-content {
-    background-color: #f5f8fd;
+    background-color: rgba(153,153,153,.2);
     border-top: 3px  solid #025abb;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    color: #eff2f7;
   }
   
   .vertical-timeline-element--work .vertical-timeline-element-content {
-    background-color: #f5f8fd;
+    background-color: rgba(153,153,153,.2);
     border-top: 3px  solid #027856;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    color: #eff2f7;
+
   }
 
   .vertical-timeline-element--work-tech .vertical-timeline-element-content {
-    background-color: #f5f8fd;
+    background-color: rgba(153,153,153,.2);
     border-top: 3px  solid #e0e622;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    color: #eff2f7;
+
   }

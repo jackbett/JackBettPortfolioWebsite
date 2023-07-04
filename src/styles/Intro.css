@@ -1,7 +1,7 @@
 .sec-padding {
   padding: 12rem 0;
   position: relative;
-  background-color: #f5f8fd;
+  background-color: #232323;
   min-height: calc(100vh - 60px);
 }
 
@@ -37,12 +37,12 @@
   font-size: 5rem;
   margin-top: 3rem;
   text-align: center;
-  color: #1f1f1f;
+  color: #eff2f7;
 }
 
 .intro__content-details-para {
   font-size: 2.8rem;
-  color: #1f1f1f;
+  color: #eff2f7;
   max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 2rem;
@@ -85,10 +85,10 @@
   align-items: center;
   justify-content: center;
 
-  color: #1f1f1f;
 }
 
 .intro__content-icons .icon {
+    color: #eff2f7;
 
   font-size: 8rem;
 }
@@ -140,7 +140,7 @@ inherits: false;
 --clr-1: #00ffa4;
 --clr-2: #a668ff;
 --clr-3: #5298cc;
---clr-4: #7f73d7;
+--clr-4: #2d2374;
 --clr-5: #5bd3d3;
 }
 
@@ -179,7 +179,7 @@ animation: gradientAnimation 10s linear infinite;
   align-items: center;
   justify-content: center;
   margin-top: 7rem;
-  color: #1f1f1f;
+  color: #eff2f7;
 }
 
 .intro__content-icons-desktop {

@@ -57,10 +57,10 @@ function Intro() {
                   I am a Back End Software Engineer located in Buffalo, New York.
                 </p>
                 <div className="intro__content-icons intro__content-icons-desktop">
-                  <div className="intro__content-icons-linkedin">
+                  <div className="intro__content-icons-linkedin" color>
                     <a href="https://google.com" onClick={handleClick}>
                       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-                        <LinkedInIcon className="icon" />
+                        <LinkedInIcon className="icon" color='#ffffff'/>
                       </motion.button>
                     </a>
                   </div>
