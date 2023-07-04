@@ -1,7 +1,7 @@
 .sec-padding {
   padding: 12rem 0;
   position: relative;
-  background-color: #232323;
+  /* background-color: #232323; */
   /* min-height: calc(100vh - 60px); */
   min-height: 100vh;
 
