@@ -40,16 +40,31 @@
   }
   
   @keyframes wheel {
-	to {
-	  opacity: 0;
-	  top: 60px;
+	0% {
+	  opacity: 1;
+	  top: 10px; /* Starting position */
+	}
+	50% {
+	  opacity: 1;
+	  top: 60px; /* Bounce up position */
+	}
+	100% {
+	  opacity: 1;
+	  top: 10px; /* Back to starting position */
 	}
   }
   
   @-webkit-keyframes wheel {
-	to {
-	  opacity: 0;
-	  top: 60px;
+	0% {
+	  opacity: 1;
+	  top: 10px; /* Starting position */
+	}
+	50% {
+	  opacity: 1;
+	  top: 60px; /* Bounce up position */
+	}
+	100% {
+	  opacity: 1;
+	  top: 10px; /* Back to starting position */
 	}
   }
-  
