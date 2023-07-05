@@ -24,6 +24,7 @@ const ParticlesComponent = () => {
 
   const particlesStyle = {
     height: '100%',
+    position: 'fixed',
   };
 
   return (
