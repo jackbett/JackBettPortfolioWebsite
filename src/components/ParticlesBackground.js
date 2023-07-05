@@ -35,7 +35,7 @@ const ParticlesBackground = () => {
 
   const backgroundStyle = {
     height: 'var(--doc-height)',
-    minHeight: 'var(--doc-height)',
+    minHeight: '100vh',
     flex: '1',
   };
 
