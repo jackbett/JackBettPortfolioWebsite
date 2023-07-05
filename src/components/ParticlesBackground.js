@@ -4,24 +4,19 @@ import { loadStarsPreset } from 'tsparticles-preset-stars';
 
 const ParticlesBackground = () => {
   useEffect(() => {
-    const handleResize = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    const documentHeight = () => {
+      const doc = document.documentElement;
+      doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
     };
 
-    handleResize();
+    documentHeight();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', documentHeight);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', documentHeight);
     };
   }, []);
-
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  const backgroundStyle = isIOS
-    ? { position: 'fixed', inset: '0', zIndex: '-1', height: 'calc(var(--vh, 1vh) * 100)' }
-    : { height: '100vh', minHeight: 'var(--vh)', flex: '1' };
 
   const particlesInit = useCallback(async (engine) => {
     await loadStarsPreset(engine);
@@ -36,6 +31,12 @@ const ParticlesBackground = () => {
     size: {
       value: { min: 0.05, max: 0.15 },
     },
+  };
+
+  const backgroundStyle = {
+    height: 'var(--doc-height)',
+    minHeight: '100vh',
+    flex: '1',
   };
 
   return (
