@@ -3,13 +3,15 @@ import './App.css';
 import Experience from './pages/Experience';
 import Navbar from './components/Navbar';
 import About from './pages/About';
+import Splash from './pages/Splash';
+
 import './font/rhuma_sinera/Rhuma Sinera Regular.ttf';
 import './font/sharpie/Sharpie-Regular.ttf';
-import ParticlesComponent from './components/TsParticles.js';
 import Intro from './pages/Intro.js';
 import Video from './pages/Video.js';
 import Footer from './components/Footer.js';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import ParticlesBackground from './components/ParticlesBackground';
 
 function App() {
   useLayoutEffect(() => {
@@ -28,11 +30,13 @@ function App() {
 
   return (
     <ParallaxProvider>
+      {/* <Navbar /> */}
       <div className="App">
-        <Navbar />
-        <div id="splash">
-          <ParticlesComponent />
-        </div>
+      <Navbar />
+
+        <ParticlesBackground /> {/* Use ParticlesBackground component as the background */}
+        
+        <Splash></Splash>
         <div id="intro">
           <Intro />
         </div>
