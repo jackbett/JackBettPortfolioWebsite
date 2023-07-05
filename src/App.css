@@ -3,8 +3,6 @@
 }
 
 .App {
-  /* width: 100%; */
-  height: auto;
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +15,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
 
 body {
@@ -25,16 +22,14 @@ body {
   margin: 0;
 }
 
-
 @font-face {
-  font-family: "RhumaSinera";   /*Can be any text*/
-  src: local("RhumaSinera"),
-    url("./font/rhuma_sinera/Rhuma Sinera Regular.ttf") format("truetype");
+  font-family: 'RhumaSinera';
+  src: local('RhumaSinera'),
+    url('./font/rhuma_sinera/Rhuma Sinera Regular.ttf') format('truetype');
 }
 
-
 @font-face {
-  font-family: "Sharpie";   /*Can be any text*/
-  src: local("Sharpie"),
-    url("./font/sharpie/Sharpie-Regular.ttf") format("truetype");
+  font-family: 'Sharpie';
+  src: local('Sharpie'),
+    url('./font/sharpie/Sharpie-Regular.ttf') format('truetype');
 }
