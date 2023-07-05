@@ -22,10 +22,17 @@ const ParticlesComponent = () => {
     },
   };
 
+  const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('appHeight', `${window.innerHeight}px`)
+}
+
   const particlesStyle = {
-    height: '100%',
+    height: '100vh',
+    height: 'var(appHeight)',
     position: 'fixed',
   };
+
 
   return (
       <section id="particles" className="particles-sec-pad">
