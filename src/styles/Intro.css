@@ -151,7 +151,7 @@ inherits: false;
 --clr-5: #5bd3d3;
 }
 
-.card {
+.intro-card {
 height: auto;
 /* aspect-ratio: 1 / 1.5; */
 background: var(--clr-1);

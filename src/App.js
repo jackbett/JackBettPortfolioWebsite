@@ -3,6 +3,8 @@ import Experience from "./pages/Experience";
 import Navbar from './components/Navbar';
 import About from "./pages/About";
 import './font/rhuma_sinera/Rhuma Sinera Regular.ttf'
+import './font/sharpie/Sharpie-Regular.ttf'
+
 import ParticlesComponent from './components/TsParticles.js'; // Update the import path
 import Intro from './pages/Intro.js'
 import Video from './pages/Video.js'

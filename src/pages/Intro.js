@@ -112,7 +112,7 @@ function Intro() {
               ease: [0, 0.71, 0.2, 1.01],
             }}
           >
-            <div className="card">
+            <div className="intro-card">
               <div className="imgContainer">
                 <img src={JackImg} alt="" />
               </div>

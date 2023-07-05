@@ -27,3 +27,10 @@ body {
   src: local("RhumaSinera"),
     url("./font/rhuma_sinera/Rhuma Sinera Regular.ttf") format("truetype");
 }
+
+
+@font-face {
+  font-family: "Sharpie";   /*Can be any text*/
+  src: local("Sharpie"),
+    url("./font/sharpie/Sharpie-Regular.ttf") format("truetype");
+}

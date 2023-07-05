@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import VideoPlayer from '../components/VideoPlayer.js';
 import drone from '../assets/drone.svg';
 import '../styles/Video.css';
+import CardGallery from '../components/CardGallery'
 
 
 function Video() {
@@ -66,6 +67,7 @@ function Video() {
         }}
       >
         <VideoPlayer />
+        <CardGallery />
       </motion.div>
     </section>
   );
