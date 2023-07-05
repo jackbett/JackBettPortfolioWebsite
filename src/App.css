@@ -1,3 +1,7 @@
+:root {
+  --app-height: 100%;
+}
+
 .App {
   /* width: 100%; */
   height: auto;
@@ -5,7 +9,8 @@
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f0f0f0;
-  min-height: 100vh;
+  height: 100vh;
+  height: var(--app-height);
 }
 
 * {
