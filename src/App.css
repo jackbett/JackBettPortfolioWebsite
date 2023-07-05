@@ -1,12 +1,11 @@
 
 .App {
-  /* width: 100%; */
   height: auto;
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f0f0f0;
-  min-height: 100vh;
+  min-height: -webkit-fill-available; /* Use -webkit-fill-available to prevent the rerendering issue */
 }
 
 * {

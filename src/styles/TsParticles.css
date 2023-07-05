@@ -53,6 +53,15 @@
     justify-content: space-around;
     font-size: 4rem;
   }
+
+  .astroNaut {
+    margin-top: 4rem; /* Add margin-top to create space between astronaut and text */
+  }
+
+  .astroNaut img {
+    width: 150px; /* Decrease the width of the astronaut image for better fit */
+    height: 150px; /* Decrease the height of the astronaut image for better fit */
+  }
 }
 
 @keyframes scroll {
