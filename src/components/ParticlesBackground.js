@@ -42,7 +42,7 @@ const ParticlesBackground = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={options}
-      style={{ height: '100vh', minHeight: 'var(--vh)' }}
+      style={{ height: '100vh', minHeight: 'var(--vh)', flex: '1' }}
     />
   );
 };
