@@ -4,8 +4,8 @@ import { useInView } from 'react-intersection-observer';
 import VideoPlayer from '../components/VideoPlayer.js';
 import drone from '../assets/drone.svg';
 import '../styles/Video.css';
-import CardGallery from '../components/CardGallery'
-
+import Card from "../components/Card";
+import { properties } from "../constants/data";
 
 function Video() {
   const controlsTitle = useAnimation();
@@ -67,7 +67,11 @@ function Video() {
         }}
       >
         <VideoPlayer />
-        <CardGallery />
+        <div className="properties">
+        {properties.map((item) => (
+          <Card data={item} key={item.id} />
+        ))}
+        </div>
       </motion.div>
     </section>
   );

@@ -80,7 +80,7 @@ const Navbar = () => {
 
       <div className="menuIcon" onClick={handleMenuToggle}>
         <span className="icon icon-bars"></span>
-        <span className="icon icon-bars overlay"></span>
+        <span className="icon icon-bars overlay-nav"></span>
       </div>
 
       <div className={`overlay-menu ${menuToggle ? "active" : ""}`}>
