@@ -1,8 +1,10 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Particles from 'react-tsparticles';
 import { loadStarsPreset } from 'tsparticles-preset-stars';
 
 const ParticlesBackground = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const documentHeight = () => {
       const doc = document.documentElement;
@@ -20,6 +22,7 @@ const ParticlesBackground = () => {
 
   const particlesInit = useCallback(async (engine) => {
     await loadStarsPreset(engine);
+    setLoading(false); // Set loading to false when particles are initialized
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
@@ -37,16 +40,19 @@ const ParticlesBackground = () => {
     height: 'var(--doc-height)',
     minHeight: '100vh',
     flex: '1',
+    backgroundColor: loading ? 'black' : 'transparent',
   };
 
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
-      options={options}
-      style={backgroundStyle}
-    />
+    <div style={backgroundStyle}>
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={options}
+        style={{ height: '100%', width: '100%' }}
+      />
+    </div>
   );
 };
 
