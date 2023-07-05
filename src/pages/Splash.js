@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import "../styles/TsParticles.css";
 import TypeEffect from "../components/TypeEffect.js";
 import Astronaut from "../assets/Astronaut.png";
