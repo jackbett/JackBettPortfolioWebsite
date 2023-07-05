@@ -59,7 +59,7 @@ const Navbar = () => {
                 offset={0}
                 duration={0}
               >
-                Videos
+                Hobbies
               </Link>
             </li>
             <li>
@@ -121,7 +121,7 @@ const Navbar = () => {
               duration={0}
               onClick={handleMenuToggle}
             >
-              Videos
+              Hobbies
             </Link>
           </li>
           <li>

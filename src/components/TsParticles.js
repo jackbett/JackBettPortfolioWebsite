@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 import "../styles/TsParticles.css";
 import TypeEffect from "../components/TypeEffect.js";
 import Astronaut from "../assets/Astronaut.png";
-import { Parallax } from "react-scroll-parallax";
+import {Parallax } from "react-scroll-parallax";
 
 const ParticlesComponent = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -15,20 +15,6 @@ const ParticlesComponent = () => {
     await console.log(container);
   }, []);
 
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowHeight(window.innerHeight);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   const options = {
     preset: "stars",
     size: {
@@ -36,27 +22,39 @@ const ParticlesComponent = () => {
     },
   };
 
+  const particlesStyle = {
+    minHeight: '-webkit-fill-available',
+  };
+
   return (
-    <section id="particles" style={{ minHeight: windowHeight - 60 }}>
+      <section id="particles" className="particles-sec-pad">
+        
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={options}
+        style={particlesStyle}
       />
 
-      <div className="main-particle-container">
+        <div className="main-particle-container">
         <div className="typeEffect">
           <TypeEffect />
         </div>
 
-        <Parallax translateY={[-windowHeight, windowHeight]}>
-          <div className="astroNaut">
-            <img src={Astronaut} alt="Astronaut" />
-          </div>
-        </Parallax>
-      </div>
-    </section>
+       
+       
+        <Parallax translateY={['-100%', '100%']}
+      >
+             <div className="astroNaut">
+              <img src={Astronaut} alt="Astronaut" />
+             </div>
+            
+          </Parallax>
+        </div>
+
+       
+      </section>
   );
 };
 

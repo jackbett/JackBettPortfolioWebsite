@@ -45,9 +45,9 @@ function Video() {
         }}
       >
         <h2 className="heading heading-sec heading-sec__mb-med">
-          <span className="heading-sec__main">Videos</span>
+          <span className="heading-sec__main">Hobbies</span>
           <span className="heading-sec__sub">
-            Here are some videos I took with my drone!{' '}
+            Here are some videos and pictures I took! {' '} 
             <img src={drone} alt="Drone" className="drone-image" />
           </span>
         </h2>
