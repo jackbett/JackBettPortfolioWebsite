@@ -9,7 +9,6 @@
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f0f0f0;
-  height: 100vh;
   height: var(--app-height);
 }
 

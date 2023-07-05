@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useLayoutEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 import "../styles/TsParticles.css";
@@ -24,20 +24,20 @@ const ParticlesComponent = () => {
 
   const [appHeight, setAppHeight] = useState(window.innerHeight);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleResize = () => {
       setAppHeight(window.innerHeight);
     };
-
+  
     window.addEventListener("resize", handleResize);
-
+  
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const particlesStyle = {
-    height: appHeight,
+    height: `${appHeight}px`,
     position: "fixed",
   };
 
