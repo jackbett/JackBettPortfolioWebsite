@@ -4,7 +4,7 @@ import "./Listing.css";
 import { motion } from "framer-motion";
 
 const Listing = ({ data, open }) => {
-  const { imageUrl, price, address, numBedroom, numWashrooms, livingSpace } =
+  const { imageUrl, price, numBedroom } =
     data;
 
   const getRandomValue = () => Math.random() * 2 - 1; // Generate a random value between -1 and 1

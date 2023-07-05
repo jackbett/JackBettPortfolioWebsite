@@ -8,11 +8,8 @@ const Modal = ({ data, close }) => {
   const {
     imageUrl,
     price,
-    address,
     description,
     numBedroom,
-    numWashrooms,
-    livingSpace,
   } = data;
 
   const modalVariants = {
