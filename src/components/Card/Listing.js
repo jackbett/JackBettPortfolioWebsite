@@ -10,7 +10,9 @@ const Listing = ({ data, open }) => {
   const getRandomValue = () => Math.random() * 2 - 1; // Generate a random value between -1 and 1
 
   return (
+    <motion.div whileHover={{scale:1.1}}>
     <motion.div
+    // whileHover={{ scale: 1.1 }}
       className="listing"
       onClick={open}
       animate={{
@@ -40,6 +42,7 @@ const Listing = ({ data, open }) => {
           </div>
         </div>
       </div>
+    </motion.div>
     </motion.div>
   );
 };
