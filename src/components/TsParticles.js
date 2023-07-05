@@ -23,7 +23,7 @@ const ParticlesComponent = () => {
   };
 
   const particlesStyle = {
-    minHeight: '-webkit-fill-available',
+    height: '100%',
   };
 
   return (
