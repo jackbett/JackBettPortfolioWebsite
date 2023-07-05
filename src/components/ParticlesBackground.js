@@ -18,6 +18,9 @@ const ParticlesBackground = () => {
     };
   }, []);
 
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const backgroundStyle = isIOS ? { position: 'fixed', inset: '0', zIndex: '-1' } : { height: '100vh', minHeight: 'var(--vh)', flex: '1' };
+
   const particlesInit = useCallback(async (engine) => {
     await loadStarsPreset(engine);
   }, []);
@@ -39,7 +42,7 @@ const ParticlesBackground = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={options}
-      style={{ height: '100vh', minHeight: 'var(--vh)', flex: '1' }}
+      style={backgroundStyle}
     />
   );
 };
