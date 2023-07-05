@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   const scrollToTop = () => {
-    scroll.scrollToTop({ duration: 0, offset: -60 });
+    scroll.scrollToTop({ duration: 0, offset: 0});
   };
 
   return (

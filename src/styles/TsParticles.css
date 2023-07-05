@@ -1,6 +1,6 @@
 .particles-sec-pad {
   padding: 12rem 0;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -55,7 +55,7 @@
   }
 
   .astroNaut {
-    margin-top: 4rem; /* Add margin-top to create space between astronaut and text */
+    margin-top: rem; /* Add margin-top to create space between astronaut and text */
   }
 
   .astroNaut img {
