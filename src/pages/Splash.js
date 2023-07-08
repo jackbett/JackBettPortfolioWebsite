@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TsParticles.css";
+import "../styles/Splash.css";
 import TypeEffect from "../components/TypeEffect.js";
 import Astronaut from "../assets/Astronaut.png";
 import { Parallax } from "react-scroll-parallax";

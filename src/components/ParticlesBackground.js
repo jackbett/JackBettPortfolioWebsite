@@ -6,7 +6,7 @@ const ParticlesBackground = () => {
   useEffect(() => {
     const documentHeight = () => {
       const doc = document.documentElement;
-      doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
+      doc.style.setProperty('--doc-height', `${window.screen.height}px`);
     };
 
     documentHeight();
