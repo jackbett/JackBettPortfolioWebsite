@@ -3,27 +3,7 @@ import Particles from 'react-tsparticles';
 import { loadStarsPreset } from 'tsparticles-preset-stars';
 
 const ParticlesBackground = () => {
-  const [backgroundHeight, setBackgroundHeight] = useState(0);
-
-  useEffect(() => {
-    const calculateBackgroundHeight = () => {
-      const doc = document.documentElement;
-      const windowHeight = window.innerHeight || 0;
-      const searchBarHeight = window.screen.height - windowHeight;
-      const backgroundHeight = windowHeight + searchBarHeight;
-      doc.style.setProperty('--background-height', `${backgroundHeight}px`);
-      setBackgroundHeight(backgroundHeight);
-    };
-
-    calculateBackgroundHeight();
-
-    window.addEventListener('resize', calculateBackgroundHeight);
-
-    return () => {
-      window.removeEventListener('resize', calculateBackgroundHeight);
-    };
-  }, []);
-
+ 
   const particlesInit = useCallback(async (engine) => {
     await loadStarsPreset(engine);
   }, []);
@@ -40,8 +20,8 @@ const ParticlesBackground = () => {
   };
 
   const backgroundStyle = {
-    height: `${backgroundHeight}px`,
-    minHeight: '100vh',
+    height: '100lvh',
+    minHeight: '100lvh',
     flex: '1',
   };
 
