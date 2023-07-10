@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadStarsPreset } from 'tsparticles-preset-stars';
 
