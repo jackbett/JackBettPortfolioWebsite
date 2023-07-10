@@ -26,13 +26,15 @@ const ParticlesBackground = () => {
   };
 
   return (
-    <div style={{ minHeight: '100lvh', height: '100lvh', top: 0, left: 0, width: '100%', zIndex: 0}}>
+    <div style={{ top: 0, left: 0, width: '100%', zIndex: 0}}>
       <Particles
+        height='100lvh'
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={options}
         style={backgroundStyle}
+        full
       />
     </div>
   );
