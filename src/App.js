@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import './App.css';
 import Experience from './pages/Experience';
 import Navbar from './components/Navbar';
@@ -14,28 +14,12 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import ParticlesBackground from './components/ParticlesBackground';
 
 function App() {
-  useLayoutEffect(() => {
-    const setAppHeight = () => {
-      const doc = document.documentElement;
-      doc.style.setProperty('--app-height', `${window.innerHeight}px`);
-    };
-
-    setAppHeight();
-    window.addEventListener('resize', setAppHeight);
-
-    return () => {
-      window.removeEventListener('resize', setAppHeight);
-    };
-  }, []);
 
   return (
     <ParallaxProvider>
-      {/* <Navbar /> */}
       <div className="App">
       <Navbar />
-
-        <ParticlesBackground /> {/* Use ParticlesBackground component as the background */}
-        
+        <ParticlesBackground />
         <Splash></Splash>
         <div id="intro">
           <Intro />
