@@ -76,3 +76,11 @@
     color: #eff2f7;
 
   }
+
+  .vertical-timeline-element--work-wegs .vertical-timeline-element-content {
+    background-color:#1f1f1f;
+    border-top: 3px  solid #cc63ca;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    color: #eff2f7;
+
+  }

@@ -6,10 +6,11 @@ import "react-vertical-timeline-component/style.min.css"
 import UbIcon from "../assets/UB.png";
 import MTB from "../assets/MTB.svg";
 import MTBBlack from "../assets/MTBBlack.svg";
+import WegmansIcon from "../assets/WegmansLogo.png";
 
 import '../styles/Experience.css'
 
-import { ECBO, EMH, TDPEMH } from '../components/MuiChip.js'
+import { ECBO, EMH, TDPEMH, WEGMANS } from '../components/MuiChip.js'
 
 function Experience() {
     const controls = useAnimation();
@@ -169,7 +170,7 @@ const [titleRef, titleInView] = useInView({ triggerOnce: false });
                     <VerticalTimelineElement
                         position={'right'}
                         className='vertical-timeline-element--work'
-                        date='August 2022 - Present'
+                        date='August 2022 - May 2024'
                         iconStyle={{
                             background: "#ffffff",
                             display: "flex",
@@ -197,6 +198,40 @@ const [titleRef, titleInView] = useInView({ triggerOnce: false });
                             for microservices to interact seamlessly.</p>
                         <div className='chip-div'>
                             <EMH />
+                        </div>
+                    </VerticalTimelineElement>
+                </VerticalTimeline>
+                <VerticalTimeline lineColor="#3e497a">
+                    <VerticalTimelineElement
+                        position={'left'}
+                        className='vertical-timeline-element--work-wegs'
+                        date='May 2024 - Present'
+                        iconStyle={{
+                            background: "#b850b1",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            borderRadius: "50%",
+                        }}
+                        icon={<img src={WegmansIcon} alt="Wegmans" className="timeline-icon" />}
+                        animate={controls}
+                        initial="hidden"
+                        ref={ref}
+                        variants={{
+                            visible: { opacity: 1, x: 0 },
+                            hidden: { opacity: 0, x: -100 },
+                        }}
+                        intersectionObserverProps={{}}
+                    >
+                        <h3 className='verical-timeline-element-title'>
+                            Wegmans - Pricing and Promotions
+                        </h3>
+                        <h4 className='vertical-timeline-element-subtitle'>
+                            Rochester, NY
+                        </h4>
+                        <p>Maintaining and reducing tech debt of Wegmans' Pricing and Promotion application. </p>
+                        <div className='chip-div'>
+                            <WEGMANS />
                         </div>
                     </VerticalTimelineElement>
                 </VerticalTimeline>

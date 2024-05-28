@@ -41,3 +41,14 @@ export const EMH = () => {
         </Stack>
     )
 }
+
+export const WEGMANS = () => {
+    return(
+        <Stack direction = 'row' spacing = {1}>
+            <Chip label = 'C#' style={chipStyle}/>   
+            <Chip label = '.NET' style={chipStyle}/>
+            <Chip label = 'Azure' style={chipStyle}/>
+            <Chip label = 'IaC' style={chipStyle}/>
+        </Stack>
+    )
+}
