@@ -1,8 +1,8 @@
-import React from 'react';
 import './App.css';
 import Experience from './pages/Experience';
 import Navbar from './components/Navbar';
 import About from './pages/About';
+import Life from './pages/Life';
 import Splash from './pages/Splash';
 
 import './font/rhuma_sinera/Rhuma Sinera Regular.ttf';
@@ -26,6 +26,9 @@ function App() {
         </div>
         <div id="about">
           <About />
+        </div>
+        <div id="life">
+          <Life />
         </div>
         <div id="video">
           <Video />
