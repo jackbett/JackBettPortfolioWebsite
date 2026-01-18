@@ -106,7 +106,10 @@ function About() {
                 </p>
                 <p className="about__content-details-para">
                   I was able to develop and grow my programming skills while gaining experience
-                  in <strong>Azure Cloud</strong> and <strong>Java Spring Boot Microservices</strong>.
+                  in <strong>leadership</strong> and <strong> teamwork</strong>.
+                </p>
+                 <p className="about__content-details-para">
+                  I am currently a software developer at <strong>Wegmans!</strong>
                 </p>
                 <p className="about__content-details-para">
                   Outside of work, I enjoy hiking, photography, and videography. I'm also very imaginative
@@ -136,7 +139,7 @@ function About() {
                 initial="hidden"
                 animate={controlsSkills}
               >
-                {['Java', 'Python', 'React', 'CSS', 'Azure', 'GIT', 'SQL', 'IBM MQ', 'Kibana', 'CI/CD', 'Relational Database', 'Agile', 'Spring Boot'].map(
+                {['Java', 'Python', 'React', 'CSS', 'Azure', 'GIT', 'SQL', 'IBM MQ', 'Kibana', 'CI/CD', 'Relational Database', 'Agile', 'Spring Boot', 'C#', 'Blazor', '.NET'].map(
                   (skill, index) => (
                     <motion.div key={index} className="skills__skill" variants={item}>
                       {skill}
