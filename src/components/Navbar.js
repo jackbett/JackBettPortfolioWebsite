@@ -53,6 +53,18 @@ const Navbar = () => {
             <li>
               <Link
                 activeClass="active"
+                to="life"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={0}
+              >
+                Life
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="active"
                 to="video"
                 spy={true}
                 smooth={true}
@@ -109,6 +121,19 @@ const Navbar = () => {
               onClick={handleMenuToggle}
             >
               About
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="life"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={0}
+              onClick={handleMenuToggle}
+            >
+              Life
             </Link>
           </li>
           <li>
